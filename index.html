@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=VT323&display=swap');
+      </style>
+    <title>Mario Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="startGame">
+        <img src="/images/HomeImage.jpg" alt="">
+        <p>Press 1 for Normal World</p>
+        <p>Press 2 for Castle World</p>
+
+    </div>
+
+    <div class="gameOver">
+        <p>Game Over</p>
+        <button onclick=location.reload()>Replay</button>
+    </div>
+
+
+<div class="gameContainer">
+    <div class="scoreDiv"><img src="/images/mario-coin-unscreen.gif" alt="">x<span class="score">0</span></div>
+    <div class="char">
+        <div class="mario"><img src="/images/stillMario.png" class="marioImage"></div>
+        <div class="dragon animateDragon"><img src="/images/dragon.png" ></div>
+    </div>
+   
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+
