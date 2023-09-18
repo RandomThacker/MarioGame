@@ -43,13 +43,21 @@ html,body{
     /* margin-top: 10px; */
 }
 
+.copy{
+    font-size: 30px !important;
+    margin-left: 430px !important;
+    color: wheat !important;
+    margin-bottom: 15px !important;
+    margin-top: -10px !important;
+}
+
 .startGame .touch{
     color: #ffcd10;
     display: none;
 }
 
 .startGame .start{
-    color: #ffcd10;
+    color: white;
 }
 
 .gameOver {
@@ -328,6 +336,13 @@ html,body{
         display: none;
     }
 
+    .copy{
+        font-size: 23px !important;
+        margin-left: 300px !important;
+        color: wheat !important;
+        margin-bottom: 15px !important;
+        margin-top: -10px !important;
+    }
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
