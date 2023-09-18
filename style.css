@@ -99,6 +99,12 @@ body{
     border: 1px solid black;
 }
 
+.buttons button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
 .right-keys{
     position: absolute;
     bottom: 25vh;

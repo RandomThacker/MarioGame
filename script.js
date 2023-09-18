@@ -19,7 +19,7 @@ stageClear = new Audio("stage_clear.wav")
 
 //-----------Key Actions-------------
 document.onkeydown = (e) => {
-    console.log(e.keyCode)
+    // console.log(e.keyCode)
     //----------"1" Key----------
     if (e.keyCode == 49) {
        gameStart()
@@ -50,12 +50,12 @@ setInterval(() => {
     dx = parseInt(window.getComputedStyle(dragon, null).getPropertyValue('left'));
     dy = parseInt(window.getComputedStyle(dragon, null).getPropertyValue('top'));
 
-    console.log(dx)
+    // console.log(dx)
 
     offsetX = Math.abs(mx - dx)
     offsetY = Math.abs(my - dy)
 
-    console.log(offsetX,)
+    // console.log(offsetX,)
 
 
     //------------Check Collision-----------
@@ -111,11 +111,11 @@ setInterval(() => {
         if (newDur <= 2) {
             newDur = 2
             dragon.style.animationDuration = newDur + "s";
-            console.log(newDur)
+            // console.log(newDur)
         }
         else if((score/100)%2==0) {
             dragon.style.animationDuration = newDur + "s";
-            console.log(newDur)
+            // console.log(newDur)
         }
         // }, 1000)
     }
@@ -131,7 +131,7 @@ function onUp(){
     mario.classList.add("animateMario")
         audioJump.play()
         setTimeout(() => {
-            console.log("remove")
+            // console.log("remove")
             mario.classList.remove("animateMario")
         }, 800)
 }
