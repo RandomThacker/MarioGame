@@ -9,6 +9,10 @@
 html,body{
     height: 100%;
     width: 100%;
+    background: url("bg.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
     /* overflow-y: hidden;
     overflow-x: auto; */
 }
@@ -131,10 +135,10 @@ html,body{
 .gameContainer {
     height: 100vh;
     width: 100vw;
-    background: url("bg.png");
+    /* background: url("bg.png");
     background-size: cover;
     background-position: center;
-    position: relative;
+    position: relative; */
 }
 
 .scoreDiv {
@@ -248,8 +252,8 @@ html,body{
 @media (max-width: 900px){
 
     html,body{
-        height: 100vw;
-        width: 100vh;
+        height: 100%;
+        width: 100%;
         /* overflow-y: hidden;
         overflow-x: auto; */
     }
