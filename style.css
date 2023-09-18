@@ -85,7 +85,7 @@ html,body{
 
 .buttons i{
     color: black;
-    font-size: 30px;
+    font-size: 40px;
     background-color: rgba(240, 248, 255, 0.238);
     padding: 5px;
     border-radius: 50%;
@@ -117,7 +117,7 @@ html,body{
 }
 
 .btnstyle i{
-    padding: 3px 7px;
+    padding: 3px 10px;
 }
 
 .bottomButtons{
