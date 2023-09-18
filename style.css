@@ -9,12 +9,7 @@
 html,body{
     height: 100%;
     width: 100%;
-    /* background: url("bg.png");
-    background-size: cover;
-    background-position: center; */
-    /* position: relative; */
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow: hidden;
 }
 
 .startGame {
@@ -254,8 +249,7 @@ html,body{
     html,body{
         height: 100%;
         width: 100%;
-        overflow-y: hidden;
-        overflow-x: auto;
+        overflow: hidden;
     }
 
     .buttons{
