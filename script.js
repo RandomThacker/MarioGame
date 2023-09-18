@@ -162,15 +162,5 @@ function gameStart() {
     scoreDiv.style.visibility = "visible"
     dragon.style.animationName = "dragon";
     audioNormal.play()
-}
-
-function openFullscreen() {
-    body = document.querySelector(".gameContainer")
-    if (body.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (body.webkitRequestFullscreen) { /* Safari */
-        elem.webkitRequestFullscreen();
-    } else if (body.msRequestFullscreen) { /* IE11 */
-        elem.msRequestFullscreen();
-    }
+    window.scrollTo(0, 15000);
 }
