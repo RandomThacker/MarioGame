@@ -301,7 +301,7 @@ html,body{
 
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+/* @media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
     html {
       transform: rotate(-90deg);
       transform-origin: left top;
@@ -312,4 +312,4 @@ html,body{
       top: 100%;
       left: 0;
     }
-  }
+  } */
