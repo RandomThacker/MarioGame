@@ -9,6 +9,7 @@
 html{
     height: 100%;
     width: 100%;
+    background-color: red;
     /* overflow-y: hidden;
     overflow-x: auto; */
 }
@@ -300,14 +301,15 @@ body{
 
 }
 
-@media (orientation: portrait) {
-    body {
-      width:100vh;
-  
-      -webkit-transform: rotate(-90deg);
-      -moz-transform: rotate(-90deg);
-      -o-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
+@media screen and (min-width: 320px) and (max-width: 767px) and (orientation: portrait) {
+    html {
       transform: rotate(-90deg);
+      transform-origin: left top;
+      width: 100vh;
+      height: 100vw;
+      overflow-x: hidden;
+      position: absolute;
+      top: 100%;
+      left: 0;
     }
   }
