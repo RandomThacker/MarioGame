@@ -2,6 +2,8 @@
 <html lang="en">
 
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -15,36 +17,38 @@
 </head>
 
 <body>
-    <div class="gameContainer">
-
-    <div class="startGame">
-        <img src="HomeImage.jpg" alt="">
-        <p>Score 1000 points to go to the next level</p>
-        <p onclick="gameStart()" class="touch">Touch here to start the game</p>
+    <div class="gameContainer" id="element">
+        <button id="go-button">Enable Full Screen</button>
 
 
-    </div>
+        <div class="startGame">
+            <img src="HomeImage.jpg" alt="">
+            <p>Score 1000 points to go to the next level</p>
+            <p onclick="gameStart()" class="touch">Touch here to start the game</p>
 
-    <div class="gameOver">
-        <p>Game Over</p>
-        <button onclick=location.reload()>Replay</button>
-    </div>
 
-    <div class="right-keys buttons">
-        <button class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></button>
-        <div class="bottomButtons">
-            <button class="left btnstyle" onclick="onLeft()"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="right btnstyle" onclick="onRight()"><i class="fa-solid fa-angle-right"></i></button>
         </div>
-    </div>
 
-    <div class="left-keys buttons">
-        <button class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></button>
-        <div class="bottomButtons">
-            <button class="left btnstyle" onclick="onLeft()"><i class="fa-solid fa-angle-left"></i></button>
-            <button class="right btnstyle" onclick="onRight()"><i class="fa-solid fa-angle-right"></i></button>
+        <div class="gameOver">
+            <p>Game Over</p>
+            <button onclick=location.reload()>Replay</button>
         </div>
-    </div>
+
+        <div class="right-keys buttons">
+            <button class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></button>
+            <div class="bottomButtons">
+                <button class="left btnstyle" onclick="onLeft()"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="right btnstyle" onclick="onRight()"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
+
+        <div class="left-keys buttons">
+            <button class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></button>
+            <div class="bottomButtons">
+                <button class="left btnstyle" onclick="onLeft()"><i class="fa-solid fa-angle-left"></i></button>
+                <button class="right btnstyle" onclick="onRight()"><i class="fa-solid fa-angle-right"></i></button>
+            </div>
+        </div>
 
         <div class="scoreDiv"><img src="mario-coin-unscreen.gif" alt="">x<span class="score">0</span></div>
         <div class="char">
