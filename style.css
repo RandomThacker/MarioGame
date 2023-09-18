@@ -6,10 +6,17 @@
     font-family: 'VT323', monospace;
 }
 
-html, body {
+html{
     height: 100%;
     width: 100%;
     overflow: hidden;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
 }
 
 .startGame {
@@ -78,6 +85,9 @@ html, body {
 
 .buttons{
     visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .buttons i{
@@ -109,6 +119,12 @@ html, body {
 
 .btnstyle i{
     padding: 3px 7px;
+}
+
+.bottomButtons{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
 
 }
 
