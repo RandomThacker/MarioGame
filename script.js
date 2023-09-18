@@ -6,6 +6,8 @@ gameOver = document.querySelector(".gameOver")
 scoreCount = document.querySelector(".score")
 startGame = document.querySelector(".startGame")
 scoreDiv = document.querySelector(".scoreDiv")
+up = document.querySelector(".up")
+right = document.querySelector(".right")
 let score = 0;
 cross = true
 audioNormal = new Audio("NormalSpeed.mp3")
@@ -14,42 +16,28 @@ audioGameOver = new Audio("GameOver.mp3")
 audioJump = new Audio("jump.mp3")
 stageClear = new Audio("stage_clear.wav")
 
+
 //-----------Key Actions-------------
 document.onkeydown = (e) => {
     console.log(e.keyCode)
     //----------"1" Key----------
     if (e.keyCode == 49) {
-        marioImage.src = "mario1.gif"
-        dragon.style.visibility = "visible"
-        startGame.style.display = "none";
-        scoreDiv.style.visibility = "visible"
-        dragon.style.animationName = "dragon";
-        audioNormal.play()
+       gameStart()
     }
 
     //------------Up Key--------------
     else if (e.keyCode == 38) {
-        mario.classList.add("animateMario")
-        audioJump.play()
-        setTimeout(() => {
-            console.log("remove")
-            mario.classList.remove("animateMario")
-        }, 800)
+        onUp();
     }
 
     //----------Right Key---------------
     else if (e.keyCode == 39) {
-        mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
-        mario.style.left = mx + 75 + "px"
-        mario.style.transform = "scaleX(1)";
+        onRight()
     }
 
     //----------Left Key------------
     else if (e.keyCode == 37) {
-        mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
-        mario.style.left = mx - 75 + "px"
-        mario.style.transform = "scaleX(-1)";
-
+       onLeft()
     }
 }
 
@@ -137,4 +125,35 @@ setInterval(() => {
 function updateScore() {
     score += 100;
     scoreCount.innerHTML = score;
+}
+
+function onUp(){
+    mario.classList.add("animateMario")
+        audioJump.play()
+        setTimeout(() => {
+            console.log("remove")
+            mario.classList.remove("animateMario")
+        }, 800)
+}
+
+function onRight(){
+    mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
+        mario.style.left = mx + 75 + "px"
+        mario.style.transform = "scaleX(1)";
+}
+
+function onLeft(){
+    mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
+    mario.style.left = mx - 75 + "px"
+    mario.style.transform = "scaleX(-1)";
+
+}
+
+function gameStart(){
+    marioImage.src = "mario1.gif"
+    dragon.style.visibility = "visible"
+    startGame.style.display = "none";
+    scoreDiv.style.visibility = "visible"
+    dragon.style.animationName = "dragon";
+    audioNormal.play()
 }

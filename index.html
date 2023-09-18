@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
@@ -13,8 +14,9 @@
 
     <div class="startGame">
         <img src="HomeImage.jpg" alt="">
-        <p>Press 1 for Normal World</p>
-        <p>Press 2 for Castle World</p>
+        <p>Score 1000 points to go to the next level</p>
+        <p onclick="gameStart()" class="touch">Touch here to start the game</p>
+
 
     </div>
 
@@ -23,6 +25,15 @@
         <button onclick=location.reload()>Replay</button>
     </div>
 
+    <div class="right-keys buttons">
+        <div class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></div>
+        <div class="right btnstyle" onclick="onRight()"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+
+    <div class="left-keys buttons">
+        <div class="up" onclick="onUp()"><i class="fa-solid fa-angle-up"></i></div>
+        <div class="left btnstyle" onclick="onLeft()"><i class="fa-solid fa-angle-left"></i></div>
+    </div>
 
 <div class="gameContainer">
     <div class="scoreDiv"><img src="mario-coin-unscreen.gif" alt="">x<span class="score">0</span></div>

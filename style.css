@@ -6,7 +6,7 @@
     font-family: 'VT323', monospace;
 }
 
-body {
+html, body {
     height: 100%;
     width: 100%;
     overflow: hidden;
@@ -43,6 +43,11 @@ body {
     /* margin-top: 10px; */
 }
 
+.startGame .touch{
+    color: #ffcd10;
+    display: none;
+}
+
 .gameOver {
     height: 100vh;
     width: 100vw;
@@ -71,6 +76,42 @@ body {
     cursor: pointer;
 }
 
+.buttons{
+    visibility: hidden;
+}
+
+.buttons i{
+    color: black;
+    font-size: 30px;
+    background-color: rgba(240, 248, 255, 0.238);
+    padding: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.right-keys{
+    position: absolute;
+    bottom: 25vh;
+    right: 1.5vw;
+    z-index: 10;
+}
+
+.left-keys{
+    position: absolute;
+    bottom: 25vh;
+    left: 1.5vw;
+    z-index: 10;
+}
+
+.btnstyle{
+    margin-top: 1vw;
+}
+
+.btnstyle i{
+    padding: 3px 7px;
+
+}
+
 .gameContainer {
     height: 100vh;
     width: 100vw;
@@ -95,7 +136,6 @@ body {
 .scoreDiv img {
     height: 50px;
 }
-
 
 .gameOver {
     visibility: hidden;
@@ -186,4 +226,53 @@ body {
     100% {
         left: -10vw;
     }
+}
+
+
+@media (max-width: 900px){
+    .buttons{
+        visibility: visible;
+    }
+
+    .gameContainer {
+        background: url("bg.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+    .startGame img {
+        height: 25vw;
+        margin-top: -50px;
+        margin-bottom: 10px;
+    }
+    
+    .startGame p {
+        font-size: 3vw;
+        text-align: left;
+        color: white;
+        /* margin-top: 10px; */
+    }
+
+    .dragon img {
+        height: 90px;
+        width: 90px;
+    }
+    
+    .mario img {
+        height: 100px;
+        width: 100px;
+    }
+    
+    .mario {
+        left: 3vw;
+    }
+
+    .scoreDiv img {
+        height: 3vw;
+    }
+    
+    .startGame .touch{
+        display: block;
+    }
+
 }
