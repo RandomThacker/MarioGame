@@ -263,9 +263,9 @@ html,body{
     }
 
     .gameContainer {
-        background: url("bg.png");
+        /* background: url("bg.png");
         background-size: cover;
-        background-position: center;
+        background-position: center; */
     }
 
     .startGame img {
