@@ -8,26 +8,23 @@ startGame = document.querySelector(".startGame")
 scoreDiv = document.querySelector(".scoreDiv")
 let score = 0;
 cross = true
-audioNormal = new Audio("/audio/NormalSpeed.mp3")
-audioSpeed = new Audio("/audio/SpeedUp.mp3")
-audioGameOver = new Audio("/audio/GameOver.mp3")
-audioJump = new Audio("/audio/jump.mp3")
+audioNormal = new Audio("NormalSpeed.mp3")
+audioSpeed = new Audio("SpeedUp.mp3")
+audioGameOver = new Audio("GameOver.mp3")
+audioJump = new Audio("jump.mp3")
+stageClear = new Audio("stage_clear.wav")
 
 //-----------Key Actions-------------
 document.onkeydown = (e) => {
     console.log(e.keyCode)
     //----------"1" Key----------
     if (e.keyCode == 49) {
-        marioImage.src = "/images/mario1.gif"
+        marioImage.src = "mario1.gif"
+        dragon.style.visibility = "visible"
         startGame.style.display = "none";
         scoreDiv.style.visibility = "visible"
         dragon.style.animationName = "dragon";
         audioNormal.play()
-    }
-
-     //------------"2" Key--------------
-     else if (e.keyCode == 50) {
-        window.location.href = "../MarioGameLv2/index.html";
     }
 
     //------------Up Key--------------
@@ -43,14 +40,14 @@ document.onkeydown = (e) => {
     //----------Right Key---------------
     else if (e.keyCode == 39) {
         mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
-        mario.style.left = mx + 15 + "px"
+        mario.style.left = mx + 75 + "px"
         mario.style.transform = "scaleX(1)";
     }
 
     //----------Left Key------------
     else if (e.keyCode == 37) {
         mx = parseInt(window.getComputedStyle(mario, null).getPropertyValue('left'));
-        mario.style.left = mx - 15 + "px"
+        mario.style.left = mx - 75 + "px"
         mario.style.transform = "scaleX(-1)";
 
     }
@@ -70,15 +67,18 @@ setInterval(() => {
     offsetX = Math.abs(mx - dx)
     offsetY = Math.abs(my - dy)
 
+    console.log(offsetX,)
+
+
     //------------Check Collision-----------
-    if (offsetX < 15 && offsetY < 22) {
+    if (offsetX < 73 && offsetY < 52) {
         dx = parseInt(window.getComputedStyle(dragon, null).getPropertyValue('left'));
         dragon.style.left = dx + "px"
         dragon.classList.remove("animateDragon")
         mario.classList.add("deadMario")
         setTimeout(() => {
-            mario.style.bottom = "-100px"
-        }, 1000)
+            mario.style.display = "none";
+        }, 700)
         cross = false
         audioNormal.pause()
         audioSpeed.pause()
@@ -89,7 +89,25 @@ setInterval(() => {
     }
 
     //-----------Increase score and speed----------------
-    else if (dx == 0 && cross) {
+    else if (dx < 0 && cross) {
+
+        if(score ==300){
+            updateScore()
+            dragon.style.display = "none"
+            // dragon.style.animationName = "none";
+            mario.style.transform = "scaleX(1)";
+            mario.classList.remove("animateMario")
+            mario.classList.add("marioExit")
+            audioNormal.pause()
+            audioSpeed.pause()
+
+            stageClear.play()
+            setTimeout (()=>{
+            window.location.href = "../MarioGameLv2/index.html";
+            },6000)
+        }
+
+        else{
         updateScore()
         cross = false
         setTimeout(() => {
@@ -113,6 +131,7 @@ setInterval(() => {
         }
         // }, 1000)
     }
+}
 })
 
 function updateScore() {
