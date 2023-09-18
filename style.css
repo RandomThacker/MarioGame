@@ -9,14 +9,15 @@
 html{
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    /* overflow-y: hidden;
+    overflow-x: auto; */
 }
 
 body{
     height: 100%;
     width: 100%;
-    overflow: hidden;
-
+    /* overflow-y: hidden;
+    overflow-x: auto; */
 }
 
 .startGame {
@@ -298,3 +299,15 @@ body{
     }
 
 }
+
+@media (orientation: portrait) {
+    body {
+      width:100vh;
+  
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -o-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+    }
+  }

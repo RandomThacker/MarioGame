@@ -79,7 +79,7 @@ setInterval(() => {
     //-----------Increase score and speed----------------
     else if (dx < 0 && cross) {
 
-        if(score ==300){
+        if(score ==900){
             updateScore()
             dragon.style.display = "none"
             // dragon.style.animationName = "none";
@@ -92,7 +92,7 @@ setInterval(() => {
             stageClear.play()
             setTimeout (()=>{
             window.location.href = "../MarioGameLv2/index.html";
-            },6000)
+            },5000)
         }
 
         else{
