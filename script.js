@@ -162,5 +162,5 @@ function gameStart() {
     scoreDiv.style.visibility = "visible"
     dragon.style.animationName = "dragon";
     audioNormal.play()
-    window.scrollTo(0, 15000);
+    window.scrollTo(15000, 15000);
 }
