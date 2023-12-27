@@ -26,6 +26,10 @@ document.onkeydown = (e) => {
         gameStart()
     }
 
+    else if (e.keyCode == 97) {
+        gameStart()
+     }
+
     //------------Up Key--------------
     else if (e.keyCode == 38) {
         onUp();
