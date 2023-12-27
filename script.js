@@ -137,7 +137,7 @@ function onUp() {
     mario.classList.add("animateMario")
     audioJump.play()
     setTimeout(() => {
-        // console.log("remove")
+        console.log("remove")
         mario.classList.remove("animateMario")
     }, 800)
 }
