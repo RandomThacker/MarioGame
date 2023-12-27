@@ -35,6 +35,10 @@ document.onkeydown = (e) => {
         onUp();
     }
 
+    else if (e.keyCode == 32) {
+        onUp();
+    }
+
     //----------Right Key---------------
     else if (e.keyCode == 39) {
         onRight()
